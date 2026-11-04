@@ -9,13 +9,12 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/gpl-3.0.txt>.
+ * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.txt>.
  */
-
 package com.movtery.zalithlauncher.setting.enums
 
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -25,21 +24,19 @@ import com.movtery.zalithlauncher.R
 import com.movtery.zalithlauncher.setting.AllSettings
 
 /**
- * 启动器UI深色主题
+ * Launcher UI dark theme setting.
  */
 enum class DarkMode(val textRes: Int) {
     Enable(R.string.generic_enable),
     Disable(R.string.generic_disable),
 
-    /**
-     * 跟随系统变化
-     */
+    /** Follow system appearance. */
     FollowSystem(R.string.generic_follow_system)
 }
 
 /**
- * 当前启动器是否处于深色主题模式中，和 [isSystemInDarkTheme] 函数使用方法一致，
- * 但引入了启动器的设置系统的干预
+ * Reports whether the launcher is currently in dark theme mode,
+ * while respecting the launcher's own DarkMode setting.
  */
 @Composable
 fun isLauncherInDarkTheme(): Boolean {
